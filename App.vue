@@ -1,7 +1,9 @@
 <script>
 	import Vue from 'vue'
+	import eruda from 'eruda'
 	export default {
 		onLaunch: function() {
+			eruda.init();
 			uni.getSystemInfo({
 				success: function(e) {
 					// #ifndef MP
