@@ -21,12 +21,12 @@
 						<image v-if="PageCur=='page2'" src="../../static/tabBar/page2_cur.png"></image>
 						<image v-if="PageCur != 'page2'" src="../../static/tabBar/page2.png"></image>
 					</view>
-					<view :class="PageCur=='page2'?'color_main':'text-gray'">技术栈</view>
+					<view :class="PageCur=='page2'?'color_main':'text-gray'">答题</view>
 				</view>
 
 				<view @click="NavChange" class="action text-gray add-action" data-cur="page3">
 					<image class="logo_btn" mode="widthFix" src="../../static/tabBar/page3_cur.png"></image>
-					<view :class="PageCur=='page3'?'color_main':'text-gray'">组件模板</view>
+					<view :class="PageCur=='page3'?'color_main':'text-gray'">模板</view>
 				</view>
 
 				<view class="action" @click="NavChange" data-cur="page4">
@@ -35,7 +35,7 @@
 						<image v-if="PageCur=='page4'" src="../../static/tabBar/page4_cur.png"></image>
 						<image v-if="PageCur != 'page4'" src="../../static/tabBar/page4.png"></image>
 					</view>
-					<view :class="PageCur=='page4'?'color_main':'text-gray'">文章资讯</view>
+					<view :class="PageCur=='page4'?'color_main':'text-gray'">博客</view>
 				</view>
 
 				<view class="action" @click="NavChange" data-cur="page5">
@@ -46,7 +46,7 @@
 						<image v-if="PageCur=='page5'" src="../../static/tabBar/page5_cur.png"></image>
 						<image v-if="PageCur != 'page5'" src="../../static/tabBar/page5.png"></image>
 					</view>
-					<view :class="PageCur=='page5'?'color_main':'text-gray'">个人中心</view>
+					<view :class="PageCur=='page5'?'color_main':'text-gray'">我的</view>
 				</view>
 
 			</view>
@@ -57,10 +57,10 @@
 
 <script>
 	import page1 from "./page1.vue"; //首页
-	import page2 from "./page2.vue"; //技术视频
-	import page3 from "./page3.vue"; //宅家学
-	import page4 from "./page4.vue"; //资讯
-	import page5 from "./page5.vue"; //个人中心
+	import page2 from "./page2.vue"; //答题
+	import page3 from "./page3.vue"; //模板
+	import page4 from "./page4.vue"; //博客
+	import page5 from "./page5.vue"; //我的
 	export default {
 		components: {
 			page1,

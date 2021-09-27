@@ -1,10 +1,12 @@
 <!-- 首页 -->
 <template>
 	<view>
+		<!--
 		<cu-custom bgColor="bg-gradual-blue" :isBack="false">
-			<!-- <block slot="backText">返回</block> -->
+			<block slot="backText">返回</block>
 			<block slot="content">首页</block>
 		</cu-custom>
+		-->
 
 		<add-tip :tip="tip" :duration="duration" />
 
@@ -301,8 +303,7 @@
 		},
 		watch: {},
 		mounted() {
-			console.log(this.projectList);
-			this.getData();
+			//this.getData();
 		},
 		methods: {
 			getData() {
@@ -330,7 +331,7 @@
 				// console.log(e.currentTarget.dataset.mid)
 				if (e.currentTarget.dataset.mid == 1 || e.currentTarget.dataset.mid == 2) {
 					uni.navigateTo({
-						url: '../timeline?mid=' + e.currentTarget.dataset.mid
+						url: '../../demoPages/timeline/timeline?mid=' + e.currentTarget.dataset.mid
 					});
 				} else if (e.currentTarget.dataset.mid == 3) {
 					uni.navigateTo({
@@ -345,12 +346,12 @@
 			},
 			goProject(id) {
 				uni.navigateTo({
-					url: '../project/project?proId=' + id
+					url: '../project/detail?proId=' + id
 				});
 			},
 			goVideo() {
 				uni.navigateTo({
-					url: '../video'
+					url: '../video/video'
 				});
 			}
 		}
